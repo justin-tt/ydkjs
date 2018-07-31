@@ -1,8 +1,11 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
 a	/home/justin/ydkjs/async1-statementordering.js	/^var a,b,c;$/;"	v	language:JavaScript
 add	/home/justin/ydkjs/async3-nowandlater.js	/^function add(getX, getY, cb) {$/;"	f	language:JavaScript
-const	/home/justin/ydkjs/async3-nowandlater.js	/^function fetchY(cb) {$/;"	f	language:JavaScript
+addPromise	/home/justin/ydkjs/async3-nowandlater.js	/^function addPromise(xPromise, yPromise) {$/;"	f	language:JavaScript
+const	/home/justin/ydkjs/async3-nowandlater.js	/^}$/;"	f	language:JavaScript
 fetchX	/home/justin/ydkjs/async3-nowandlater.js	/^function fetchX(cb) {$/;"	f	language:JavaScript
 fetchY	/home/justin/ydkjs/async3-nowandlater.js	/^function fetchY(cb) {$/;"	f	language:JavaScript
-fibonacciRecursive	/home/justin/ydkjs/async3-nowandlater.js	/^  const fibonacciRecursive = function fibonacciRecursive(n) {$/;"	f	language:JavaScript
+fibonacciRecursive	/home/justin/ydkjs/async3-nowandlater.js	/^const fibonacciRecursive = function fibonacciRecursive(n) {$/;"	f	language:JavaScript
 foo	/home/justin/ydkjs/async1-statementordering.js	/^function foo() {$/;"	f	language:JavaScript
+foo	/home/justin/ydkjs/promise1.js	/^function foo(x, y) {$/;"	f	language:JavaScript
+unreliableAdd	/home/justin/ydkjs/promise1.js	/^function unreliableAdd(x, y) {$/;"	f	language:JavaScript

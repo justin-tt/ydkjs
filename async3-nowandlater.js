@@ -3,22 +3,24 @@ function fetchX(cb) {
   cb(3);
 }
 
+const fibonacciRecursive = function fibonacciRecursive(n) {
+  // must validate n is positive
+  if (n == 0 || n == 1) {
+    return 1;
+  } else {
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+  }
+};
+
 function fetchY(cb) {
   // asynchronous function
-  const fibonacciRecursive = function fibonacciRecursive(n) {
-    // must validate n is positive
-    if (n == 0 || n == 1) {
-      return 1;
-    } else {
-      return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
-    }
-  };
   setTimeout(cb, 1000, fibonacciRecursive(35));
 }
 
 function add(getX, getY, cb) {
   // using callbacks to handle BOTH synchronous/asynchronous functions
   // and gates
+  // add() itself IS asynchronous
   var x, y;
   getX(function(xVal) {
     x = xVal;
@@ -35,6 +37,24 @@ function add(getX, getY, cb) {
   });
 }
 
+console.log("before");
 add(fetchX, fetchY, function(sum) {
   console.log(sum);
 });
+console.log("after");
+
+
+// using promises
+function addPromise(xPromise, yPromise) {
+  return Promise.all([xPromise, yPromise])
+  .then(function (values) {
+    return values[0] + values[1];
+  });
+}
+
+
+addPromise(3, 35).then(
+  function(sum) {
+    console.log(sum);
+  }
+);
